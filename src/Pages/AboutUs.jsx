@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import aboutHeaderImg from '../assets/aboutHeaderImage.png'
+import aboutHeaderImg from '../assets/aboutUs-hero-background.webp'
 import NoteIcon from '../assets/noteMusic.svg?react'
 import ActiveUsers from '../assets/followIcon.svg?react'
-import MeetTheTeam from '../Components/AboutUsComponents/MeetTheTeam'
-import MakesUsDiff from '../Components/AboutUsComponents/MakesUsDiff'
-import OurStory from '../Components/AboutUsComponents/OurStory'
+import MeetTheTeam from '../Feature/AboutUs/MeetTheTeam'
+import MakesUsDiff from '../Feature/AboutUs/MakesUsDiff'
+import OurStory from '../Feature/AboutUs/OurStory'
 
 const AboutUs = () => {
 

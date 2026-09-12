@@ -1,5 +1,5 @@
 import React from 'react'
-import pezhvakTeamImg from '../../assets/file_000000002a3081f4b273d45edef76f35.png'
+import pezhvakTeamImg from '../../assets/CorePicture.webp'
 import { Link } from 'react-router-dom'
 import linkedIn from '../../assets/linkedin-svgrepo-com.svg'
 import instagram from '../../assets/instagram.svg'

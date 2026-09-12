@@ -1,11 +1,10 @@
 import React from 'react'
-import AtjCard from '../Components/AtjCard'
+import AskToJoinCard from '../Components/AskToJoinCard'
 import TrendingOnExplore from '../Components/TrendingOnExplore'
 import { Link, useLocation } from 'react-router-dom'
 import ShortCuts from '../Components/ShortCuts'
 import songLogo from '../assets/noteMusic.svg'
-import userLogo from '../assets/followIcon.svg'
-import AllMusicsPanel from '../Components/ExploreComponents/AllMusicsPanel'
+import AllMusicsPanel from '../Feature/Explore/AllMusicsPanel'
 
 const Explore = () => {
   const location = useLocation()
@@ -65,7 +64,7 @@ const Explore = () => {
 
       <AllMusicsPanel />
 
-      <AtjCard
+      <AskToJoinCard
         title={'Find Your People'}
         paragraph={'Connect with artists who share your passion for music.'}
         button={'Connect Now'}

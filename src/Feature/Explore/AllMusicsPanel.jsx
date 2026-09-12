@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import musicPic from '../../assets/file_000000002a3081f4b273d45edef76f35.png'
+import musicPic from '../../assets/CorePicture.webp'
 import playMusicIcon from '../../assets/playMusicIcon.svg'
-import { useSavedItemsStore } from '../../StoredItems/storeItem'
+import { OnPlayingMusic } from '../../StoredItems/storeItem'
 
 const AllMusicsPanel = () => {
 
-    const playedMusic = useSavedItemsStore(state => state.addItem)
+    const playedMusic = OnPlayingMusic(state => state.addItem)
 
     const AllSongs = [
         {

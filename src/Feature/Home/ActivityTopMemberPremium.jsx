@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import musicPic from '../../assets/file_000000002a3081f4b273d45edef76f35.png'
+import musicPic from '../../assets/CorePicture.webp'
 import tickIcon from '../../assets/tick-circle-svgrepo-com.svg'
 import crownPremium from '../../assets/premiumCrown.svg'
 import followIcon from '../../assets/followIcon.svg'
@@ -61,12 +61,14 @@ const ActivityTopMemberPremium = () => {
   ]
 
   return (
-    <div data-aos="fade-up" className='w-full grid grid-cols-8 gap-4
-      max-sm:text-[10px]'>
+    <div data-aos="fade-up" className='w-full grid grid-cols-1 gap-4
+      sm:grid-cols-2
+      xl:grid-cols-4'>
 
-      <div className='bg-linear-290 from-darkblueLowVolume-bg col-span-3 to-dark-tiffany-bg/20 flex flex-col p-8 rounded-[10px] gap-y-6 border border-DarkGreen-br
-        max-lg:col-span-8
-        max-md:p-4'>
+      <div className='bg-linear-290 from-darkblueLowVolume-bg to-dark-tiffany-bg/20 flex flex-col rounded-[10px] gap-y-6 border border-DarkGreen-br p-4
+        sm:col-span-2
+        md:p-8
+        '>
         <div className='flex justify-between items-center'>
           <h2 className='text-[25px]'>Top Creator</h2>
           <Link className='text-blue-txt'>{`View all >`}</Link>
@@ -87,14 +89,18 @@ const ActivityTopMemberPremium = () => {
 
                   <div>
                     <h3>{item.username}</h3>
-                    <p className='text-muted-text'>{item.userId}</p>
+                    <p className='text-muted-text text-[clamp(12px,3vw,16px)] sm:hidden'>{
+                      item.userId.length > 15 ? item.userId.slice(0 , 12) + "..." : item.userId
+                    }</p>
+
+                    <p className='text-muted-text text-[clamp(12px,3vw,16px)] hidden sm:block'>{item.userId}</p>
                   </div>
 
                 </div>
 
                 <div className='flex items-center justify-between gap-x-4
                   max-md:gap-x-2'>
-                  <div className='flex items-center justify-between w-full gap-x-2 text-muted-text'>
+                  <div className='flex items-center justify-between w-full gap-x-2 text-muted-text text-[clamp(12px,3vw,16px)]'>
                     <img src={followIcon} width={15} />
                     <p>{item.like}</p>
                   </div>
@@ -119,9 +125,8 @@ const ActivityTopMemberPremium = () => {
 
       </div>
 
-      <div className='bg-linear-370 from-darkblueLowVolume-bg to-dark-tiffany-bg/20 flex flex-col p-8 col-span-3 rounded-[10px] gap-y-6 border border-DarkGreen-br
-      max-lg:col-span-4
-      max-sm:col-span-8'>
+      <div className='bg-linear-370 from-darkblueLowVolume-bg to-dark-tiffany-bg/20 flex flex-col p-4 rounded-[10px] gap-y-6 border border-DarkGreen-br
+        md:p-8'>
         <div className='flex justify-between items-center'>
           <h2 className='text-[25px]'>Your Activity</h2>
           <Link className='text-blue-txt '>{`View all >`}</Link>
@@ -192,9 +197,8 @@ const ActivityTopMemberPremium = () => {
 
       </div>
 
-      <div className='bg-linear-140 from-darkblueLowVolume-bg to-dark-tiffany-bg/20 flex flex-col justify-between p-8 col-span-2 rounded-[10px] gap-y-6 border border-DarkGreen-br
-      max-lg:col-span-4
-      max-sm:col-span-8'>
+      <div className='bg-linear-140 from-darkblueLowVolume-bg to-dark-tiffany-bg/20 flex flex-col justify-between p-4 rounded-[10px] gap-y-6 border border-DarkGreen-br
+        md:p-8'>
 
         <div className='flex flex-col gap-y-4'>
           <div className='flex items-center gap-x-2'>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import musicPic from '../assets/file_000000002a3081f4b273d45edef76f35.png'
+import musicPic from '../assets/CorePicture.webp'
 import playMusicIcon from '../assets/playMusicIcon.svg'
-import { useSavedItemsStore } from "../StoredItems/storeItem";
+import { OnPlayingMusic } from "../StoredItems/storeItem";
 import useEmblaCarousel from 'embla-carousel-react';
 import { useTranslation } from 'react-i18next';
 import commentIcon from '../assets/messageIcon.svg'
@@ -12,7 +12,7 @@ const TrendingOnExplore = () => {
 
   const { t, i18n } = useTranslation();
   const [persian, setPersian] = useState(false)
-  const playedMusic = useSavedItemsStore((state) => state.addItem);
+  const playedMusic = OnPlayingMusic((state) => state.addItem);
   const [saveFavoriteId, setSaveFavoriteId] = useState([])
 
   const checkFavoriteId = (id) => {
@@ -50,7 +50,7 @@ const TrendingOnExplore = () => {
     {
       id: '2',
       username: 'Ali mx',
-      songName: 'Nomad',
+      songName: 'A vagabond fighting with his fate in a desert for last hope',
       musicPicture: musicPic,
       like: '2',
       price: false,

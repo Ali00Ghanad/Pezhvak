@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AtjCard = ({title , paragraph , button}) => {
+const AskToJoinCard = ({title , paragraph , button}) => {
     return (
         <div data-aos="fade-right" className='w-full p-6 text-white -bg-linear-330 from-green-bg via-dark-tiffany-bg to-green-bg
             rounded-[10px] flex items-center justify-between gap-4
@@ -18,4 +18,4 @@ const AtjCard = ({title , paragraph , button}) => {
     )
 }
 
-export default AtjCard
+export default AskToJoinCard

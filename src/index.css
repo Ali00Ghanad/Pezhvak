@@ -1,47 +1,81 @@
 @import "tailwindcss";
 
 @theme {
-    --color-tiffany-bg: #80d5ad;
-    --color-dark-tiffany-bg: #5b9d86;
-    --color-green-bg: #26724e;
-    --color-darkest-blue-bg: #04131a;
-    --color-darkblueLowVolume-bg: #0E252E;
+  --color-tiffany-bg: #80d5ad;
+  --color-dark-tiffany-bg: #5b9d86;
+  --color-green-bg: #26724e;
+  --color-darkest-blue-bg: #04131a;
+  --color-darkblueLowVolume-bg: #0E252E;
 
-    --color-neutralGreen-br: #569380;
-    --color-DarkGreen-br: #1F3E45;
+  --color-neutralGreen-br: #569380;
+  --color-DarkGreen-br: #1F3E45;
 
-    --color-blue-txt: #2cb49c;
-    --color-muted-text: #c0c0c0;
-    --color-tiffany-txt: #80d5ad;
-    --color-darkest-blue-txt: #244c5c;
-    --color-dark-tiffany-txt: #5b9d86;
-}
-
-
-html[lang='fa'] {
-    font-family: "Vazirmatn", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-html[lang='en'] {
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  --color-blue-txt: #2cb49c;
+  --color-muted-text: #c0c0c0;
+  --color-tiffany-txt: #80d5ad;
+  --color-darkest-blue-txt: #244c5c;
+  --color-dark-tiffany-txt: #5b9d86;
 }
 
 h1,
 h2,
 h3 {
-    color: white;
+  color: white;
+}
+
+h1 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+h2 {
+  font-size: clamp(20px, 3vw, 28px);
 }
 
 button {
-    cursor: pointer;
-    transition-duration: 0.4s;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+a {
+  text-wrap: nowrap;
 }
 
 button:hover {
-    transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.sortButton:hover .sortIcon {
+  rotate: 180deg;
+}
+
+html[lang="fa"] {
+  font-family: '';
+}
+
+html[lang="en"] {
+  font-family: "enlish-font", sans-serif;
+}
+
+@font-face {
+  font-family: "english-font";
+  src: url("/src/Font/MPLUSRounded1c-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "english-font";
+  src: url("/src/Font/MPLUSRounded1c-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "english-font";
+  src: url("/src/Font/MPLUSRounded1c-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }

@@ -25,7 +25,7 @@ function App() {
     AOS.init({
       duration: 800,
       offset: 100,
-      once: false,
+      once: true,
     });
   }, []);
 

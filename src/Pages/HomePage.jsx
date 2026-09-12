@@ -1,12 +1,13 @@
 import React from 'react'
-import HomePageHeader from '../Components/HomePageComponents/HomePageHeader'
-import TeacherArtistGuide from '../Components/HomePageComponents/TeacherArtistGuide'
+import HomePageHeader from '../Feature/Home/HomePageHeader'
+import TeacherArtistGuide from '../Feature/Home/TeacherArtistGuide'
 import TrendingOnExplore from '../Components/TrendingOnExplore'
-import ActivityTopMemberPremium from '../Components/HomePageComponents/ActivityTopMemberPremium'
-import LessonsCarousel from '../Components/LessonsComponents/LessonsCarousel'
-import AtjCard from '../Components/AtjCard'
+import ActivityTopMemberPremium from '../Feature/Home/ActivityTopMemberPremium'
+import LessonsCarousel from '../Feature/Lessons/LessonsCarousel'
+import AskToJoinCard from '../Components/AskToJoinCard'
 import ShortCuts from '../Components/ShortCuts'
 import songLogo from '../assets/noteMusic.svg'
+import AskAnything from '../Components/AskAnything'
 
 const HomePage = () => {
 
@@ -42,11 +43,12 @@ const HomePage = () => {
       <TrendingOnExplore />
       <ActivityTopMemberPremium />
       <LessonsCarousel />
-      <AtjCard
+      <AskToJoinCard
         button={'Sign Up Now'}
         paragraph={'Join Pezhvak today and be part of a community that values real music.'}
         title={'Ready to share your sound?'}
       />
+      
     </main>
   )
 }

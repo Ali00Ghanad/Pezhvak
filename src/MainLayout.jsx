@@ -3,10 +3,10 @@ import { Outlet } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import PlayedMusic from './Components/PlayedMusic'
-import { useSavedItemsStore } from './StoredItems/storeItem'
+import { OnPlayingMusic } from './StoredItems/storeItem'
 
 export default function MainLayout() {
-    const playableMusic = useSavedItemsStore((state) => state.items[0])
+    const playableMusic = OnPlayingMusic((state) => state.items[0])
 
     return (
 

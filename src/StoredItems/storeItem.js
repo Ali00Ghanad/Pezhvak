@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export const useSavedItemsStore = create((set) => ({
+export const OnPlayingMusic = create((set) => ({
     items: [],
 
     addItem: (item) =>
@@ -18,3 +18,4 @@ export const useSavedItemsStore = create((set) => ({
             items: [],
         }),
 }));
+

@@ -38,8 +38,9 @@ const TeacherArtistGuide = () => {
     return (
         <div className='w-full flex gap-4 max-md:flex-col'>
 
-            <div className={`w-full rounded-[10px] border border-DarkGreen-br p-6 ${isPersian ? "bg-linear-90" : "bg-linear-290"} from-darkblueLowVolume-bg
-             to-dark-tiffany-bg/20  flex flex-col gap-6 items-start relative`}>
+            <div className={`w-full rounded-[10px] border border-DarkGreen-br p-4 ${isPersian ? "bg-linear-90" : "bg-linear-290"} from-darkblueLowVolume-bg
+             to-dark-tiffany-bg/20  flex flex-col gap-6 items-start relative
+                lg:p-6`}>
 
                 <div className='flex flex-col gap-2'>
                     <div className='flex items-center gap-x-2 z-20'>
@@ -67,8 +68,9 @@ const TeacherArtistGuide = () => {
 
             </div>
 
-            <div className={`w-full rounded-[10px] border border-DarkGreen-br p-6 ${isPersian ? "bg-linear-90" : "bg-linear-290"} from-darkblueLowVolume-bg
-             to-dark-tiffany-bg/20  flex flex-col gap-6 items-start relative`}>
+            <div className={`w-full rounded-[10px] border border-DarkGreen-br p-4 ${isPersian ? "bg-linear-90" : "bg-linear-290"} from-darkblueLowVolume-bg
+             to-dark-tiffany-bg/20  flex flex-col gap-6 items-start relative
+             lg:p-6`}>
 
                 <div className='flex flex-col gap-2 z-20'>
                     <div className='flex items-center gap-x-2'>
