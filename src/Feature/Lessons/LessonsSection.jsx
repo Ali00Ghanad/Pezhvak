@@ -11,6 +11,7 @@ import tick from '../../assets/tick-circle-svgrepo-com.svg'
 const LessonsSection = () => {
     const [saveFavoriteId, setFavoriteSaveId] = useState([])
     const [showFilters, setShowFilters] = useState(false)
+    const [moreItems, setMoreItems] = useState(10)
     const [filterButtonId, setFilterButtonId] = useState()
 
     const checkFavoriteId = (id) => {
@@ -355,7 +356,8 @@ const LessonsSection = () => {
                 items-start
                 gap-5
                 min-w-0
-
+                border-b border-DarkGreen-br
+                pb-10
                 max-xl:flex-col
             "
         >
@@ -822,6 +824,7 @@ const LessonsSection = () => {
                     flex-1
                     min-w-0
                     w-full
+                    overflow-hidden
                 "
             >
                 {/* Sort */}
@@ -880,7 +883,7 @@ const LessonsSection = () => {
                         sm:gap-5
                     "
                 >
-                    {packages.map((item) => (
+                    {packages.slice(0, moreItems).map((item) => (
                         <article
                             data-aos="fade-up"
                             key={item.id}
@@ -1123,7 +1126,25 @@ const LessonsSection = () => {
                             </div>
                         </article>
                     ))}
+
                 </div>
+
+                {
+                    moreItems < packages.length && (
+                        <button
+                            onClick={() => setMoreItems(prev => prev + 10)}
+                            className='bg-darkest-blue-bg rounded-[10px] w-fit py-2 px-4 border border-DarkGreen-br
+                                mx-auto mt-10 text-white hover:text-blue-txt duration-400 hover:duration-400 flex'>
+                            More Items
+
+                            <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19V5m0 14-4-4m4 4 4-4" />
+                            </svg>
+
+                        </button>
+                    )
+                }
+
             </main>
         </div>
     )

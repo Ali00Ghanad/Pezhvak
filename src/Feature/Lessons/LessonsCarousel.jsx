@@ -8,22 +8,34 @@ import fileIcon from '../../assets/filesIcon.svg'
 import playMusic from '../../assets/playMusicIcon.svg'
 import timeIcon from '../../assets/clock.svg'
 import { toast } from 'sonner';
+import { addToFavorites } from '../../StoredItems/storeItem';
 
 const LessonsCarousel = () => {
+
 
     const { t, i18n } = useTranslation();
     const [persian, setPersian] = useState(false)
     const [saveFavoriteId, setFavoriteSaveId] = useState([])
+    const addFavoriteItem = addToFavorites((state) => state.addItem)
+    const favoriteList = addToFavorites((state) => state.items)
+    const removeFavoriteItem = addToFavorites((state) => state.removeItem)
 
 
-    const checkFavoriteId = (id) => {
+    const checkFavoriteId = (id, item) => {
         setFavoriteSaveId(prev => prev.includes(id) ?
             prev.filter(item => item !== id) :
             [...prev, id])
 
-        saveFavoriteId.includes(id) ?
-            toast.success('Removed from Favorites') :
+
+        if (saveFavoriteId.includes(id)) {
+            toast.success('Removed from Favorites')
+            removeFavoriteItem(id)
+        }
+        else {
+            addFavoriteItem(item)
             toast.success('Added to Favorites')
+        }
+
     }
 
     useEffect(() => {
@@ -327,7 +339,9 @@ const LessonsCarousel = () => {
                                     <div className='relative flex flex-col justify-between h-full p-2'>
 
                                         <button
-                                            onClick={() => { checkFavoriteId(item.id) }}
+                                            onClick={() => {
+                                                checkFavoriteId(item.id, item)
+                                            }}
                                             className='rounded-full p-1 bg-darkest-blue-bg w-fit'
                                         >
                                             {
@@ -372,8 +386,8 @@ const LessonsCarousel = () => {
                                                     : item.level === 'Intermediate'
                                                         ? 'bg-green-300'
                                                         : item.level === 'Pro'
-                                                            && 'bg-yellow-300'
-                                                            }
+                                                        && 'bg-yellow-300'
+                                                }
                                                 `}
                                         >
                                             {item.level}

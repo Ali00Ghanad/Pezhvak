@@ -4,7 +4,8 @@ import aboutImgInfo from '../../assets/aboutUs-info-IMG.jpg'
 const OurStory = () => {
     return (
         <div data-aos='fade-up' className='bg-darkblueLowVolume-bg border border-DarkGreen-br rounded-[10px] p-10 flex gap-5 justify-between 
-        max-lg:flex-wrap'>
+        max-lg:flex-wrap
+        max-md:p-4'>
 
             <div>
                 <p className='text-tiffany-txt'>Our Story</p>

@@ -5,6 +5,7 @@ import teacherCircleIcon from '../../assets/teacherCircleicon.svg'
 import artistCircleIcon from '../../assets/noteMusic.svg'
 import tickIcon from '../../assets/tick-circle-svgrepo-com.svg'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const TeacherArtistGuide = () => {
 
@@ -36,7 +37,7 @@ const TeacherArtistGuide = () => {
     ]
 
     return (
-        <div className='w-full flex gap-4 max-md:flex-col'>
+        <div data-aos='fade-up' className='w-full flex gap-4 max-md:flex-col'>
 
             <div className={`w-full rounded-[10px] border border-DarkGreen-br p-4 ${isPersian ? "bg-linear-90" : "bg-linear-290"} from-darkblueLowVolume-bg
              to-dark-tiffany-bg/20  flex flex-col gap-6 items-start relative
@@ -64,7 +65,7 @@ const TeacherArtistGuide = () => {
                     }
                 </div>
 
-                <button className='bg-darkest-blue-bg border-DarkGreen-br border px-4 py-2 rounded-[10px] text-white hover:text-blue-txt'>{t("artist.btn")}</button>
+                <Link to='/artistGuide' className='bg-darkest-blue-bg border-DarkGreen-br border px-4 py-2 rounded-[10px] text-white hover:text-blue-txt'>{t("artist.btn")}</Link>
 
             </div>
 
@@ -94,7 +95,7 @@ const TeacherArtistGuide = () => {
                     }
                 </div>
 
-                <button className='bg-darkest-blue-bg border-DarkGreen-br border px-4 py-2 rounded-[10px] text-white hover:text-blue-txt'>{t("artist.btn")}</button>
+                <Link to='/teacherGuide' className='bg-darkest-blue-bg border-DarkGreen-br border px-4 py-2 rounded-[10px] text-white hover:text-blue-txt'>{t("artist.btn")}</Link>
 
             </div>
 

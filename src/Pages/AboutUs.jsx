@@ -29,7 +29,7 @@ const AboutUs = () => {
     return (
 
         <div className='flex flex-col gap-6'>
-            <div
+            <div dir='ltr'
                 className="
                     relative
                     overflow-hidden
@@ -41,6 +41,7 @@ const AboutUs = () => {
                     bg-darkblueLowVolume-bg
                     flex flex-col justify-between
                     p-10
+                    max-md:p-4
                     "
             >
                 <img
@@ -48,14 +49,16 @@ const AboutUs = () => {
                     alt=""
                     fetchPriority="high"
                     loading="eager"
-                    className="
+                    className={`
                         absolute
                         inset-0
                         w-full
                         h-full
-                        object-cover
-                        object-center
-                    "
+                        object-scale-down
+                        object-bottom-right
+                        max-lg:object-center
+                        max-lg:object-cover
+                    `}
                 />
 
                 <div className="relative z-10">
@@ -81,7 +84,7 @@ const AboutUs = () => {
 
                 <div
                     data-aos='fade-right'
-                    className='relative z-10 flex gap-15'
+                    className='relative z-10 flex gap-[6vw]'
                 >
                     {
                         webInfo.map((item, index) => (

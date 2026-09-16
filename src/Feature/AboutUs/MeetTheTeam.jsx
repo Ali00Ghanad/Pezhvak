@@ -31,7 +31,8 @@ const MeetTheTeam = () => {
 
 
     return (
-        <div data-aos='fade-up' className='p-10 rounded-[10px] border border-DarkGreen-br bg-darkblueLowVolume-bg'>
+        <div data-aos='fade-right' className='p-10 rounded-[10px] border border-DarkGreen-br bg-darkblueLowVolume-bg
+        max-md:p-4'>
 
             <div>
                 <h2 className='text-tiffany-txt! text-[25px]'>Meet the Team</h2>
@@ -42,7 +43,8 @@ const MeetTheTeam = () => {
                 {
                     pezhvakTeam.map((item, index) => (
                         <div key={index} className='flex bg-darkest-blue-bg/60 p-6 border border-DarkGreen-br rounded-[10px] items-center gap-6 
-                        max-md:w-full'>
+                        max-md:w-full
+                        max-md:flex-col max-md:items-start'>
                             <div className='rounded-full w-[70px] h-[70px] bg-black shrink-0'>
                                 <img src={item.image} className='w-full rounded-full object-scale-down object-cover h-full ' />
                             </div>

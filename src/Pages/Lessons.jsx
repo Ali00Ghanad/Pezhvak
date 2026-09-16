@@ -3,6 +3,8 @@ import lessonHeaderHero from '../assets/LessonsHeaderPic.webp'
 import LessonsSection from '../Feature/Lessons/LessonsSection'
 import songLogo from '../assets/noteMusic.svg'
 import ShortCuts from '../Components/ShortCuts'
+import TeacherArtistGuide from '../Feature/Home/TeacherArtistGuide'
+import { Link } from 'react-router-dom'
 
 const Lessons = () => {
   return (
@@ -13,6 +15,8 @@ const Lessons = () => {
       </div>
 
       <LessonsSection />
+
+      <TeacherArtistGuide />
 
       <ShortCuts
         shortcuts={[
@@ -39,7 +43,7 @@ const Lessons = () => {
         ]}
       />
 
-      <div data-aos='fade-up' className='w-full relative p-8 bg-darkblueLowVolume-bg rounded-[10px]'>
+      <div data-aos='fade-right' className='w-full relative p-8 bg-darkblueLowVolume-bg rounded-[10px]'>
 
         <img
           src={lessonHeaderHero}
@@ -53,7 +57,7 @@ const Lessons = () => {
             <h1 className='font-bold text-[35px]'>All Lessons</h1>
             <p className='text-muted-text'>Discover courses to grow your skills.</p>
           </div>
-          <button className='bg-dark-tiffany-bg rounded-[10px] text-white px-6 py-3 hover:bg-tiffany-bg hover:text-darkest-blue-txt'>Teach to Others</button>
+          <Link to='/uploadLesson' className='bg-dark-tiffany-bg rounded-[10px] text-white px-6 py-3 hover:bg-tiffany-bg hover:text-darkest-blue-txt'>Teach to Others</Link>
         </div>
 
       </div>

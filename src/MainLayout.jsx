@@ -10,7 +10,7 @@ export default function MainLayout() {
 
     return (
 
-        <div className="min-h-screen relative bg-darkest-blue-bg max-md:text-[14px]">
+        <div className="min-h-screen relative flex flex-col justify-between bg-darkest-blue-bg max-md:text-[14px]">
 
             <div className='w-full flex flex-col items-center border-b border-DarkGreen-br'>
                 <div className='w-full max-w-[1700px] px-8 py-4

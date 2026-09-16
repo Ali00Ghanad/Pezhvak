@@ -16,6 +16,13 @@ i18n.use(initReactI18next).init({
                     inputPh: "آهنگ ها، هنرمندان و کلاس هارو پیدا کنید",
                     convertToFa: "فارسی",
                     convertToEn: "انگلیسی",
+                    btn: {
+                        Profile: "پروفایل",
+                        ShareMusic: "بارگذاری آموزش",
+                        LastActivity: "فعالیت ها",
+                        Favorites: "مورد علاقه ها",
+                        SignLogin: "ثبت نام / ورود",
+                    }
                 },
 
                 homeHeader: {
@@ -64,7 +71,13 @@ i18n.use(initReactI18next).init({
                     inputPh: "Search for songs, artists and lessons",
                     convertToFa: "Persian",
                     convertToEn: "English",
-
+                    btn: {
+                        Profile: "Profile",
+                        ShareMusic: "Upload a Lesson",
+                        LastActivity: "Activities",
+                        Favorites: "Favorites",
+                        SignLogin: "SignUp / Login",
+                    }
                 },
                 homeHeader: {
                     title: 'Share . Explore . Learn',
@@ -88,7 +101,6 @@ i18n.use(initReactI18next).init({
                     options3: 'Engage with your students',
                     btn: 'Learn More'
                 },
-
                 artist: {
                     title: 'For Artists',
                     description: 'Share your Music, grow your audience, and start earning.',
